@@ -1,12 +1,14 @@
+import 'package:guia_de_moteis/commons/http_client/api_response.dart';
+
 abstract class AppHttpClient {
-  Future<dynamic> get<T>(String path,
+  Future<ApiResponse<T>> get<T>(String path,
       {Map<String, dynamic>? queryParameters});
 
-  Future<dynamic> post<T>(String path, {dynamic data});
+  Future<ApiResponse<T>> post<T>(String path, {dynamic data});
 
-  Future<dynamic> put<T>(String path, {dynamic data});
+  Future<ApiResponse<T>> put<T>(String path, {dynamic data});
 
-  Future<dynamic> delete<T>(String path, {dynamic data});
+  Future<ApiResponse<T>> delete<T>(String path, {dynamic data});
 
-  Future<dynamic> patch<T>(String path, {dynamic data});
+  Future<ApiResponse<T>> patch<T>(String path, {dynamic data});
 }
