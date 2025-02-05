@@ -1,0 +1,3 @@
+class ApiUrls {
+  ApiUrls._();
+}
